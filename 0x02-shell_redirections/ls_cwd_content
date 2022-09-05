@@ -30,3 +30,20 @@ drwxr-xr-x 6 root root   121 Sep  5 04:06 ..
 -rw-r--r-- 1 root root   728 Sep  5 04:08 iacta
 -rw-r--r-- 1 root root   799 Sep  5 04:42 ls_cwd_content
 -rw-r--r-- 1 root root    48 Sep  5 04:05 README.md
+total 64
+drwxr-xr-x 2 root root   281 Sep  5 04:49 .
+drwxr-xr-x 6 root root   121 Sep  5 04:06 ..
+-rwxr--r-- 1 root root    34 Sep  5 02:45 0-hello_world
+-rwxr--r-- 1 root root    28 Sep  5 02:24 1-confused_smiley
+-rwxr--r-- 1 root root    28 Sep  5 02:54 2-hellofile
+-rwxr--r-- 1 root root    39 Sep  5 03:00 3-twofiles
+-rwxr--r-- 1 root root    35 Sep  5 03:10 4-lastlines
+-rwxr--r-- 1 root root    35 Sep  5 03:49 5-firstlines
+-rwxr--r-- 1 root root    40 Sep  5 03:56 6-third_line
+-rwxr--r-- 1 root root    75 Sep  5 04:35 7-file
+-rw-r--r-- 1 root root 12288 Sep  5 04:22 .7-file.swp
+-rwxr--r-- 1 root root    37 Sep  5 04:41 8-cwd_state
+-rw-r--r-- 1 root root    37 Sep  5 04:49 9-duplicate_last_line
+-rw-r--r-- 1 root root   728 Sep  5 04:08 iacta
+-rw-r--r-- 1 root root  1598 Sep  5 04:43 ls_cwd_content
+-rw-r--r-- 1 root root    48 Sep  5 04:05 README.md
