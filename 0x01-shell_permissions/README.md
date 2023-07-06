@@ -1,4 +1,4 @@
-#### Shell Scripting Permissions Exercises
+## Shell Scripting Permissions Exercises
 ---
 Exercise 0: Create a script that switches the current user to the user betty
 
