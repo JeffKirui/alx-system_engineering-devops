@@ -1,13 +1,25 @@
 #!/usr/bin/env bash
-#transfers a file from client to server
-#The path to the file to be transferred
-#The IP of the server we want to transfer the file to
-#The username scp connects with
-#The path to the SSH private key that scp uses
+# outputs a string that returs domain records info
 
-if [ $# -lt 4 ]
+world_wide_web () {
+  if [ "$2" ]
+  then
+    rec=$(dig "$2.$1" | grep -A1 'ANSWER SECTION:' | awk '{if (NR > 1) {print $4}}')
+    ip=$(dig "$2.$1" | grep -A1 'ANSWER SECTION:' | awk '{if (NR > 1) {print $5}}')
+    echo "The subdomain $2 is a $rec record and points to $ip"
+  else
+    for i in 'www' 'lb-01' 'web-01' 'web-02'; do
+      rec=$( dig "$i.$1" | grep -A1 'ANSWER SECTION:' | awk '{if (NR > 1) {print $4}}')
+      ip=$(dig "$i.$1" | grep -A1 'ANSWER SECTION:' | awk '{if (NR > 1) {print $5}}')
+      echo "The subdomain $i is a $rec record and points to $ip"
+    done
+  fi
+  return 0
+}
+
+if [ "$2" ]
 then
-  echo "Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
+  world_wide_web "$1" "$2"
 else
-  scp -o StrictHostKeyChecking=no -i "$4" "$1" "$3@$2":~
+  world_wide_web "$1"
 fi
